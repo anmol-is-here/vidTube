@@ -22,7 +22,7 @@ const uploadOnCloudinary = async (localFilePath) => {
         )
         console.log(`File uploades on cloudnary : File src: ${response.url}`);
         // code does not work if uncomment below line.
-        // fs.unlink(localFilePath);
+        fs.unlinkSync(localFilePath);
         return response;
     } catch (error) {
         fs.unlinkSync(localFilePath);
